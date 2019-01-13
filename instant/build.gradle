@@ -9,5 +9,8 @@ android {
 }
 
 dependencies {
-    implementation project(':core')
+    implementation project(":core")
+    implementation project(":login")
+    implementation project(":member")
+    implementation project(":fragmentsample")
 }

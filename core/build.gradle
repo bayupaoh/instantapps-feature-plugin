@@ -1,4 +1,3 @@
-//apply plugin: 'com.android.application'
 apply plugin: 'com.android.feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -6,14 +5,12 @@ apply plugin: 'kotlin-kapt'
 //apply plugin: 'realm-android'
 
 android {
-
     baseFeature true
-
 
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 10
         versionName "1.0"

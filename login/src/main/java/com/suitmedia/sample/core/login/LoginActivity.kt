@@ -1,6 +1,7 @@
 package com.suitmedia.sample.core.login
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import com.suitmedia.sample.core.login.R
 import com.suitmedia.sample.core.R as Rbase
@@ -60,7 +61,9 @@ class LoginActivity : BaseActivity(), LoginView, GoogleListener, FacebookListene
     }
 
     override fun onLoginSuccess(message: String?) {
-        val intent = Intent().setClassName(CommonConstant.BASE_PACKAGE, CommonConstant.INTENT_MEMBER)
+        val intent = Intent(Intent.ACTION_VIEW,
+                Uri.parse(CommonConstant.INTENT_MEMBER_URL))
+        intent.addCategory(Intent.CATEGORY_BROWSABLE)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
@@ -116,7 +119,9 @@ class LoginActivity : BaseActivity(), LoginView, GoogleListener, FacebookListene
         }
 
         tvSkip.setOnClickListener {
-            val intent = Intent().setClassName(packageName, CommonConstant.INTENT_MEMBER)
+            val intent = Intent(Intent.ACTION_VIEW,
+                    Uri.parse(CommonConstant.INTENT_MEMBER_URL))
+            intent.addCategory(Intent.CATEGORY_BROWSABLE)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }

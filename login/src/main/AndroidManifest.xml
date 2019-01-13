@@ -23,12 +23,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:host="suitmedia.instantappsample.com" />
-                <data android:path="/signin" />
-
+                <data
+                    android:scheme="https"
+                    android:host="suitmedia.instantappsample.com"
+                    android:path="/signin" />
             </intent-filter>
 
         </activity>

@@ -2,6 +2,7 @@ package com.suitmedia.sample.core.member
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import com.jcodecraeer.xrecyclerview.XRecyclerView
 import com.suitmedia.sample.core.member.R
@@ -129,8 +130,10 @@ class MemberActivity : BaseActivity(),
 
     private fun actionClicked() {
         tvFragmentSample.setOnClickListener {
-            val intent = Intent().setClassName(CommonConstant.BASE_PACKAGE, CommonConstant.INTENT_FRAGMENT_SAMPLE)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            val intent = Intent(Intent.ACTION_VIEW,
+                    Uri.parse(CommonConstant.INTENT_FRAGMENT_SAMPLE_URL))
+            intent.addCategory(Intent.CATEGORY_BROWSABLE)
+
             startActivity(intent)
         }
     }
