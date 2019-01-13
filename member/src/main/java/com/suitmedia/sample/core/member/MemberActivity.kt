@@ -7,8 +7,8 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView
 import com.suitmedia.sample.core.member.R
 import com.suitmedia.sample.core.R as Rbase
 import com.suitmedia.sample.base.ui.BaseActivity
-import com.suitmedia.sample.feature.fragmentsample.SampleActivity
 import com.suitmedia.sample.data.api.model.User
+import com.suitmedia.sample.helper.CommonConstant
 import kotlinx.android.synthetic.main.activity_member.*
 import kotlinx.android.synthetic.main.layout_empty_member_shimmer.*
 
@@ -129,7 +129,8 @@ class MemberActivity : BaseActivity(),
 
     private fun actionClicked() {
         tvFragmentSample.setOnClickListener {
-            val intent = Intent(this, SampleActivity::class.java)
+            val intent = Intent().setClassName(CommonConstant.BASE_PACKAGE, CommonConstant.INTENT_FRAGMENT_SAMPLE)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
     }

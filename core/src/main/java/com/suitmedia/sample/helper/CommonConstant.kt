@@ -19,5 +19,5 @@ object CommonConstant {
     const val BASE_PACKAGE = "com.suitmedia.sample"
     const val INTENT_MEMBER = "${BASE_PACKAGE}.core.member.MemberActivity"
     const val INTENT_LOGIN = "${BASE_PACKAGE}.core.login.LoginActivity"
-    const val INTENT_FRAGMENT_SAMPLE = "${BASE_PACKAGE}.core.login.LoginActivity"
+    const val INTENT_FRAGMENT_SAMPLE = "${BASE_PACKAGE}.core.fragmentsample.SampleActivity"
 }

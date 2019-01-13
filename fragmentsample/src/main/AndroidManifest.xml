@@ -1,2 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.suitmedia.sample.core.fragmentsample" />
+    package="com.suitmedia.sample.core.fragmentsample">
+
+    <application>
+
+        <activity
+            android:name=".SampleActivity"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="suitmedia.instantappsample.com"
+                    android:pathPattern="/sample"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -41,6 +41,6 @@ android {
 dependencies {
     implementation project(":login")
     implementation project(":member")
-//    implementation project(":fragmentsample")
+    implementation project(":fragmentsample")
 }
 

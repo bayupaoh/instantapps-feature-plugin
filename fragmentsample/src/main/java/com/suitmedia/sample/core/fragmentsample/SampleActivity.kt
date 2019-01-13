@@ -1,8 +1,8 @@
-package com.suitmedia.sample.feature.fragmentsample
+package com.suitmedia.sample.core.fragmentsample
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import com.suitmedia.sample.core.R
+import com.suitmedia.sample.core.fragmentsample.R
 import com.suitmedia.sample.base.ui.BaseActivity
 import kotlinx.android.synthetic.main.activity_test.*
 
