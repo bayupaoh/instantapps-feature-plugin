@@ -133,7 +133,9 @@ class MemberActivity : BaseActivity(),
             val intent = Intent(Intent.ACTION_VIEW,
                     Uri.parse(CommonConstant.INTENT_FRAGMENT_SAMPLE_URL))
             intent.addCategory(Intent.CATEGORY_BROWSABLE)
-
+            if (this.applicationContext != null) {
+                intent.`package` = applicationContext.packageName
+            }
             startActivity(intent)
         }
     }

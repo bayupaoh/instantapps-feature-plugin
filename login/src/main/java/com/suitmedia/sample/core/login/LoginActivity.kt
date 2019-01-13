@@ -123,6 +123,9 @@ class LoginActivity : BaseActivity(), LoginView, GoogleListener, FacebookListene
                     Uri.parse(CommonConstant.INTENT_MEMBER_URL))
             intent.addCategory(Intent.CATEGORY_BROWSABLE)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            if (this.applicationContext != null) {
+                intent.`package` = applicationContext.packageName
+            }
             startActivity(intent)
         }
     }
