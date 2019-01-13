@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    def fileName = "Suitcore"
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.suitmedia.sample"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${fileName} V.${variant.versionName}(${variant.versionCode}) - ${formattedDate}(${variant.buildType.name}).apk"
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+}
+
+dependencies {
+    implementation project(":login")
+    implementation project(":member")
+//    implementation project(":fragmentsample")
+}
+

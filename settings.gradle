@@ -1,0 +1,1 @@
+include ':core', ':app', ':instant', ':login', ':member', ':fragmentsample'

@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.suitmedia.sample.core.login">
+
+    <application>
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="default-url"
+                android:value="https://suitmedia.instantappsample.com/signin" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="suitmedia.instantappsample.com" />
+                <data android:path="/signin" />
+
+            </intent-filter>
+
+        </activity>
+    </application>
+</manifest>
