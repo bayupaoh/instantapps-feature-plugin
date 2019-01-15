@@ -3,6 +3,9 @@
 
     <application>
 
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
@@ -17,7 +20,7 @@
                 android:name="default-url"
                 android:value="https://suitmedia.instantappsample.com/signin" />
 
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -25,6 +28,17 @@
 
                 <data
                     android:scheme="https"
+                    android:host="suitmedia.instantappsample.com"
+                    android:path="/signin" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
                     android:host="suitmedia.instantappsample.com"
                     android:path="/signin" />
             </intent-filter>

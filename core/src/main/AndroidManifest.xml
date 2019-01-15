@@ -22,6 +22,10 @@
         android:theme="@style/AppTheme">
 
 
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+
         <service android:name="com.suitmedia.sample.firebase.fcm.FCMFireBaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

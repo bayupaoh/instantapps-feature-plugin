@@ -1,3 +1,6 @@
+// replace
+// apply plugin: 'com.android.application'
+// with
 apply plugin: 'com.android.feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'

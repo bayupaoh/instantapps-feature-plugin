@@ -6,6 +6,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    signingConfigs {
+        released {
+            storeFile file("${rootDir}/keystore/keystore.jks")
+            storePassword "bayu1234"
+            keyAlias "bayu1234"
+            keyPassword "bayu1234"
+            v2SigningEnabled true
+        }
+    }
+
 }
 
 dependencies {
