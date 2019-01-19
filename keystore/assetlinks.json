@@ -1,0 +1,25 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.suitmedia.sample.core",
+    "sha256_cert_fingerprints":
+    ["E1:21:56:7F:93:A8:EB:2C:BF:DC:89:0D:AD:CA:3E:2B:22:8D:F9:B3:D3:F8:2A:FD:0E:B9:3D:F2:1C:CF:C1:D2"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://instantfeatureplugin.azurewebsites.net"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.suitmedia.sample.core",
+    "sha256_cert_fingerprints":
+    ["E1:21:56:7F:93:A8:EB:2C:BF:DC:89:0D:AD:CA:3E:2B:22:8D:F9:B3:D3:F8:2A:FD:0E:B9:3D:F2:1C:CF:C1:D2"]
+  }
+}]

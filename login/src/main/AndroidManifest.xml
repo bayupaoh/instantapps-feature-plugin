@@ -6,6 +6,7 @@
         <meta-data
             android:name="asset_statements"
             android:resource="@string/asset_statements" />
+
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
@@ -18,7 +19,7 @@
 
             <meta-data
                 android:name="default-url"
-                android:value="https://suitmedia.instantappsample.com/signin" />
+                android:value="https://instantfeatureplugin.azurewebsites.net/signin" />
 
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -28,7 +29,7 @@
 
                 <data
                     android:scheme="https"
-                    android:host="suitmedia.instantappsample.com"
+                    android:host="instantfeatureplugin.azurewebsites.net"
                     android:path="/signin" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
@@ -39,7 +40,7 @@
 
                 <data
                     android:scheme="http"
-                    android:host="suitmedia.instantappsample.com"
+                    android:host="instantfeatureplugin.azurewebsites.net"
                     android:path="/signin" />
             </intent-filter>
 

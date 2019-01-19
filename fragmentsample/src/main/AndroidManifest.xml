@@ -17,7 +17,7 @@
 
                 <data
                     android:scheme="https"
-                    android:host="suitmedia.instantappsample.com"
+                    android:host="instantfeatureplugin.azurewebsites.net"
                     android:pathPattern="/sample" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
@@ -28,7 +28,7 @@
 
                 <data
                     android:scheme="http"
-                    android:host="suitmedia.instantappsample.com"
+                    android:host="instantfeatureplugin.azurewebsites.net"
                     android:pathPattern="/sample" />
             </intent-filter>
         </activity>

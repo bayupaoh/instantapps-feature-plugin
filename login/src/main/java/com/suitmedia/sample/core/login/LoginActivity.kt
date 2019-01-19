@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.suitmedia.sample.core.login.R
 import com.suitmedia.sample.core.R as Rbase
 import com.suitmedia.sample.base.ui.BaseActivity
+import com.suitmedia.sample.core.member.MemberActivity
 import com.suitmedia.sample.helper.CommonConstant
 import com.suitmedia.sample.helper.socialauth.facebook.FacebookListener
 import com.suitmedia.sample.helper.socialauth.twitter.TwitterListener
